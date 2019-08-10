@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+    color: white;
+}
+h1{
+    font-family: 'Permanent Marker', cursive;
+}
+.box{
+    text-align: center;
+    border: 5px white dotted;
+}
+.big-digit{
+    font-size: 2em;
+}
