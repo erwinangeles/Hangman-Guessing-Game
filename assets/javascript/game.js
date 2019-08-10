@@ -148,10 +148,12 @@ function checkLoss()
 
 function playAgain()
 {
-    let totalGuesses = 9;
-    let userGuesses = []; // letters the user guessed
-    let wordGuessed = []; // This will be the word we actually build to match the current word
-    let gameover = false;
+     guessesLeft = 9;
+     userGuesses = []; // letters the user guessed
+     wordGuessed = []; // This will be the word we actually build to match the current word
+     gameover = false;
+    document.getElementById("guessesLeft").innerText = guessesLeft;
+    document.getElementById("userGuesses").innerText = userGuesses;
     startSound.play();
     startGame();
 
