@@ -7,31 +7,41 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/javascript/game.js"></script>
-
+   
 </head>
 <body>
-
+   
     <div class="container-fluid">
-        <div class="row justify-content-center">
-                <img src="assets/images/banner-sf.jpg" height="250px;">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                        <img src="https://33.media.tumblr.com/b630301d7f357910a72d238e3fe04500/tumblr_nsk2ybFohP1tdjgz4o1_1280.gif" width="100%">
+                </div>
         </div>
         <div class="row justify-content-center" > <h1>Street Fighter Hang-Man!</h1></div>
         <div class="row justify-content-center">
                <div class="col-md-4 box">
-                <div id="hint"></div>
+                <div id="hint">
+
+                </div>
+                <a href="javascript:playAgain();" id="playAgain" class="btn btn-warning">PLAY AGAIN</a>
+                <a href="javascript:playMusic();" id="playMusic" class="btn btn-info">Music On</a>
+                <a href="javascript:pauseMusic();" id="pauseMusic" class="btn btn-danger">Music Off</a>
+                <br>
+                <br>
                </div>
                <div class="col-md-4 box">
                     <h2>Press any key to get started!<hr></h2>
                     <h3>Current Word</h3>
                     <div id="currentWord" class="big-digit"></div>
                     <h3>Wins</h3>
-                    <div id="wins" class="big-digit">0</div>
+                    <div id="winsDiv" class="big-digit">0</div>
                     <h3>Losses</h3>
-                    <div id="losses" class="big-digit">0</div>
-                    <h3>Gusses Left</h3>
-                    <div id="guesses-left" class="big-digit">9</div>
+                    <div id="lossesDiv" class="big-digit">0</div>
+                    <h3>Guesses Left</h3>
+                    <div id="guessesLeft" class="big-digit">9</div>
                     <h3>Your Guesses so Far</h3>
-                    <div id="guesses" class="big-digit"></div>
+                    <div id="userGuesses" class="big-digit"></div>
                </div>
          </div>
         <div class="row justify-content-center">
