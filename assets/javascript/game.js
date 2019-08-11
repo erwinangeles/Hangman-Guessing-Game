@@ -33,6 +33,7 @@ function pickrandomFighter(){
     let divHint = document.querySelector("#hint");
    
     // let randomFighter = Math.floor(Math.random() * (wordBank.length));
+    
     if(randomFighter == 0){
         divHint.innerHTML = "<img src='assets/images/bison.png' height='400px'style='padding:20px'/>";
     }else if(randomFighter == 1){
@@ -50,13 +51,15 @@ function pickrandomFighter(){
     }else if(randomFighter == 7){
         divHint.innerHTML = "<img src='assets/images/sakura.png' height='300px' style='padding:20px'/>";
     }
+    
     for (let i = 0; i < wordBank[randomFighter].length; i++) {
-      
         wordGuessed.push("_");
     }   
+
+    
     console.log(wordBank[randomFighter]);
     let currentWordDiv = document.querySelector('#currentWord')
-    currentWordDiv.textContent = wordGuessed; //sets the word guessed
+    currentWordDiv.textContent = wordGuessed.join(" "); //sets the word guessed and adds space instead of comma
 }
 
 
@@ -70,6 +73,7 @@ function makeGuess(letter) {
         if (userGuesses.indexOf(letter) === -1) {
             userGuesses.push(letter);
             evaluateGuess(letter);
+          
         }
     }
 };
@@ -168,12 +172,13 @@ function pauseMusic(){
 }
 
 
-document.onkeydown = function logKey(e) {
+
+document.onkeydown = function(e) {
     if(gameover) {
         startGame();
         gameover = false;
     } else {
-    if(event.keyCode >= 65 && event.keyCode <= 90) { //makes sure key is a-z
+    if(e.keyCode >= 65 && e.keyCode <= 90) { //makes sure key is a-z
     // userGuesses.push(`${e.key.toUpperCase()}`)
     // let userGuessesDiv = document.querySelector('#guesses')
     // userGuessesDiv.textContent = userGuesses;
