@@ -73,7 +73,6 @@ function makeGuess(letter) {
         if (userGuesses.indexOf(letter) === -1) {
             userGuesses.push(letter);
             evaluateGuess(letter);
-          
         }
     }
 };
@@ -111,8 +110,10 @@ function updateGame() {
         guessingWordText += wordGuessed[i];
     }
 
+    console.log(guessingWordText);
+
     //update guesses, word, and letters entered
-    document.getElementById("currentWord").innerText = guessingWordText;
+    document.getElementById("currentWord").innerText = guessingWordText.split('').join(' '); //this was hard but finally figured out that you need Split and Join to add a space in between after inserting character
     document.getElementById("guessesLeft").innerText = guessesLeft;
     document.getElementById("userGuesses").innerText = userGuesses;
 };
